@@ -14,7 +14,7 @@ function draw() {
   textAlign(CENTER);
   text('마우스를 눌러봐!');
   drawSprites();
-  rect(0,0,600,400);
+  rect(0,0,20,400);
 }
 
 function mousePressed() {
