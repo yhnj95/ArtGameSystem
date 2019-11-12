@@ -1,20 +1,23 @@
 let canvas;
 let canvasWidth = 600;
 let canvasHeight = 400;
+var wallLeft
 
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
 canvas.position(windowWidth/2 - canvasWidth/2, 20);
-
+  wallLeft = createSprite(0,0,20,width*2);
 }
 
 function draw() {
   background(255,255,255);
   textAlign(CENTER);
+  fill(0);
   text('마우스를 눌러봐!');
+
   drawSprites();
-  rect(0,0,20,400);
+
 }
 
 function mousePressed() {
