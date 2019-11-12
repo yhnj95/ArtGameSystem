@@ -1,8 +1,12 @@
-canvasWidth = 800;
-ccavasHeight = 400;
+let canvas;
+let canvasWidth = 600;
+let canvasHeight = 400;
+
 
 function setup() {
-    canvas = createCanvas(canvasWidth, canvasHeight);
+  canvas = createCanvas(canvasWidth, canvasHeight);
+canvas.position(windowWidth/2 - canvasWidth/2, 20);
+
 }
 
 function draw() {
