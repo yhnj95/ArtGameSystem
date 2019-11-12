@@ -9,6 +9,7 @@ function setup() {
 }
 
 function draw() {
-  background(30);
-  rect(mouseX, mouseY, 100, 100);
+  background(255);
+  fill(0);
+  rect(mouseX, mouseY, 150, 150);
 }
