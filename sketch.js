@@ -28,6 +28,9 @@ function draw() {
     car1.position.x = 0;
     car1.setVelocity(random(3, 10), 0);
   }
+  if (frog.position.x >= width) {
+    frog.position.x = car1.position()
+  }
 
 
 
