@@ -6,6 +6,7 @@ let car1;
 let goal;
 let sound_hit;
 
+
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
@@ -30,7 +31,7 @@ function draw() {
 
 
 
-  if (frog.bounce(car1)) {
+  if (frog.displace(car1)) {
     sound_hit.play();
   }
 
