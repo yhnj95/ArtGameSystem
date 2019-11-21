@@ -26,12 +26,12 @@ drawSprites();
 checkGameOver();
 }
 
-function resetGame() {
-  frog = createSprite(width/2, height-30, 20, 40);
-  goal = createSprite(width/2, 0, width, 4);
-  car1 = createSprite(0, height/2, 60, 30);
-  car1.setVelocity(random(3, 10), 0);
-}
+//function resetGame() {
+//  frog = createSprite(width/2, height-30, 20, 40);
+//  goal = createSprite(width/2, 0, width, 4);
+//  car1 = createSprite(0, height/2, 60, 30);
+//  car1.setVelocity(random(3, 10), 0);
+//}
 
 function keyPressed() {
   if (keyCode == UP_ARROW) {
