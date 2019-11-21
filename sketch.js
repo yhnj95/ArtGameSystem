@@ -49,10 +49,10 @@ function keyPressed() {
 //}
 
 
-//function nextLevel() {
-//  frog.position.x = width/2;
-//  frog.position.y = height-30;
-//}
+function nextLevel() {
+  frog.position.x = width/2;
+  frog.position.y = height-30;
+}
 
 
 function playHitSound() {
