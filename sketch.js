@@ -23,8 +23,6 @@ function draw() {
   rect(mouseX, mouseY, 150, 150);
 }
 
-}
-
 function draw() {
   background(220);
 
