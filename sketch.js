@@ -14,9 +14,9 @@ function draw() {
 
 if(car1.position.x >=width) {
   car1.position.x = 0;
-  ca1.setVelocity(random(3, 10), 0);
+  ca1.setVelocity(2, 0);
 }
-if (frog.bounce(car1)){
+if (frog.displace(car1)){
   sound_hit.play();
 }
 if (frog.overlap(goal)){
