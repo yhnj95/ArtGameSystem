@@ -31,7 +31,7 @@ function draw() {
 
 
 
-  frog.displace(car1);
+  car1.displace(frog);
 
   // 충돌 시 사운드 효과에 대한 또 다른 방법
   // frog.collide(car1, playHitSound);
