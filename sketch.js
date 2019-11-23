@@ -46,7 +46,7 @@ function draw() {
   }
 
   drawSprites();
-  checkGameOver();
+//  checkGameOver();
 
 }
 
