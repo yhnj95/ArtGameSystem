@@ -2,14 +2,15 @@ let canvas;
 let canvasWidth = 600;
 let canvasHeight = 400;
 let frog;
-let car1;
-let car1;
-let car1;
-let car1;
-let car1;
-let car1;
-let car1;
-
+let bad;
+let bad1;
+let bad2;
+let bad3;
+let bad4;
+let bad5;
+let bad6;
+let bad7;
+let bad8;
 let goal;
 let sound_hit;
 
@@ -31,17 +32,50 @@ function draw() {
   background(220);
 
 
-  if (car1.position.x >= width) {
-    car1.position.x = 0;
-    car1.setVelocity(5, 0);
+  if (bad.position.x >= width) {
+    bad.position.x = 0;
+    bad.setVelocity(5, 0);
   }
+  if (bad1.position.x >= width) {
+    bad.position.x = 30;
+    bad.setVelocity(5, 0);
+  }
+  if (bad2.position.x >= width) {
+    bad.position.x =60;
+    bad.setVelocity(5, 0);
+  }
+  if (bad3.position.x >= width) {
+    bad.position.x = 90;
+    bad.setVelocity(5, 0);
+  }
+  if (bad4.position.x >= width) {
+    bad.position.x = 120;
+    bad.setVelocity(5, 0);
+  }
+  if (bad5.position.x >= width) {
+    bad.position.x = 150;
+    bad.setVelocity(5, 0);
+  }
+  if (bad6.position.x >= width) {
+    bad.position.x = 180;
+    bad.setVelocity(5, 0);
+  }
+  if (bad7.position.x >= width) {
+    bad.position.x = 210;
+    bad.setVelocity(5, 0);
+  }
+  if (bad8.position.x >= width) {
+    bad.position.x = 240;
+    bad.setVelocity(5, 0);
+  }
+
   if (frog.position.x >= width) {
-    frog.position.x = 15;
+    frog.position.x = 25;
   }
 
 
 
-  car1.displace(frog);
+  bad.displace(frog);
 
   // 충돌 시 사운드 효과에 대한 또 다른 방법
   // frog.collide(car1, playHitSound);
@@ -61,9 +95,18 @@ function draw() {
 function resetGame() {
   frog = createSprite(width/2, height-30, 20, 40);
   goal = createSprite(width/2, 0, width, 4);
-  car1 = createSprite(0, height/2, 60, 30);
+  bad = createSprite(0, 40, 60, 30);
+  bad1 = createSprite(0, 60, 60, 30);
+  bad2 = createSprite(0, 80, 60, 30);
+  bad3 = createSprite(0, 100, 60, 30);
+  bad4 = createSprite(0, 120, 60, 30);
+  bad5 = createSprite(0, 140, 60, 30);
+  bad6 = createSprite(0, 160, 60, 30);
+  bad7 = createSprite(0, 180, 60, 30);
+  bad8 = createSprite(0, 200, 60, 30);
 
-  car1.setVelocity(5, 0);
+
+  bad.setVelocity(5, 0);
 }
 
 
