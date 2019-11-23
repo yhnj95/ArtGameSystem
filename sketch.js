@@ -10,7 +10,6 @@ let bad4;
 let bad5;
 let bad6;
 let bad7;
-let bad8;
 let goal;
 let sound_hit;
 
@@ -64,10 +63,6 @@ function draw() {
     bad7.position.x = 0;
     bad7.setVelocity(5, 0);
   }
-  if (bad8.position.x >= width) {
-    bad8.position.x = 0;
-    bad8.setVelocity(5, 0);
-  }
 
   if (frog.position.x >= width) {
     frog.position.x = 25;
@@ -83,7 +78,6 @@ function draw() {
   bad5.displace(frog);
   bad6.displace(frog);
   bad7.displace(frog);
-  bad8.displace(frog);
 
 
   // 충돌 시 사운드 효과에 대한 또 다른 방법
@@ -112,7 +106,6 @@ function resetGame() {
   bad5 = createSprite(0, 330, 60, 30);
   bad6 = createSprite(0, 390, 60, 30);
   bad7 = createSprite(0, 450, 60, 30);
-  bad8 = createSprite(0, 510, 60, 30);
   bad.setVelocity(5, 0);
   bad1.setVelocity(5, 0);
   bad2.setVelocity(5, 0);
@@ -121,7 +114,6 @@ function resetGame() {
   bad5.setVelocity(5, 0);
   bad6.setVelocity(5, 0);
   bad7.setVelocity(5, 0);
-  bad8.setVelocity(5, 0);
 
 }
 
