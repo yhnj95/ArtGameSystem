@@ -26,7 +26,7 @@ function draw() {
 
   if (car1.position.x >= width) {
     car1.position.x = 0;
-    car1.setVelocity(random(5), 0);
+    car1.setVelocity(5, 0);
   }
   if (frog.position.x >= width) {
     frog.position.x = car1.position()
@@ -56,7 +56,7 @@ function resetGame() {
   goal = createSprite(width/2, 0, width, 4);
   car1 = createSprite(0, height/2, 60, 30);
 
-  car1.setVelocity(random(3, 10), 0);
+  car1.setVelocity(5, 0);
 }
 
 
@@ -67,15 +67,15 @@ function keyPressed() {
 }
 
 
-function checkGameOver() {
-  if (frog.position.x <= 0 || width <= frog.position.x) {
-    fill(255, 0, 0);
-    textSize(60);
-    textAlign(CENTER);
-    text("GAME OVER", width/2, height/2);
-
-  }
-}
+//function checkGameOver() {
+//  if (frog.position.x <= 0 || width <= frog.position.x) {
+//    fill(255, 0, 0);
+//    textSize(60);
+//    textAlign(CENTER);
+//    text("GAME OVER", width/2, height/2);
+//
+//  }
+//}
 
 
 function nextLevel() {
