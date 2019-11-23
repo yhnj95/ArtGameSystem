@@ -37,36 +37,36 @@ function draw() {
     bad.setVelocity(5, 0);
   }
   if (bad1.position.x >= width) {
-    bad.position.x = 0;
-    bad.setVelocity(5, 0);
+    bad1.position.x = 0;
+    bad1.setVelocity(5, 0);
   }
   if (bad2.position.x >= width) {
-    bad.position.x = 0;
-    bad.setVelocity(5, 0);
+    bad2.position.x = 0;
+    bad2.setVelocity(5, 0);
   }
   if (bad3.position.x >= width) {
-    bad.position.x = 0;
-    bad.setVelocity(5, 0);
+    bad3.position.x = 0;
+    bad3.setVelocity(5, 0);
   }
   if (bad4.position.x >= width) {
-    bad.position.x = 0;
-    bad.setVelocity(5, 0);
+    bad4.position.x = 0;
+    bad4.setVelocity(5, 0);
   }
   if (bad5.position.x >= width) {
-    bad.position.x = 0;
-    bad.setVelocity(5, 0);
+    bad5.position.x = 0;
+    bad5.setVelocity(5, 0);
   }
   if (bad6.position.x >= width) {
-    bad.position.x = 0;
-    bad.setVelocity(5, 0);
+    bad6.position.x = 0;
+    bad6.setVelocity(5, 0);
   }
   if (bad7.position.x >= width) {
-    bad.position.x = 0;
-    bad.setVelocity(5, 0);
+    bad7.position.x = 0;
+    bad7.setVelocity(5, 0);
   }
   if (bad8.position.x >= width) {
-    bad.position.x = 0;
-    bad.setVelocity(5, 0);
+    bad8.position.x = 0;
+    bad8.setVelocity(5, 0);
   }
 
   if (frog.position.x >= width) {
