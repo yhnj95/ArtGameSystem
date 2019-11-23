@@ -105,7 +105,7 @@ function resetGame() {
   frog = createSprite(width/2, height-30, 20, 40);
   goal = createSprite(width/2, 0, width, 4);
   bad = createSprite(0, 30, 60, 30);
-  bad1 = createSprite(0, 60, 60, 30);
+  bad1 = createSprite(30, 60, 60, 30);
   bad2 = createSprite(0, 80, 60, 30);
   bad3 = createSprite(0, 100, 60, 30);
   bad4 = createSprite(0, 120, 60, 30);
