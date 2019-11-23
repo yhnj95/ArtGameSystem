@@ -3,6 +3,13 @@ let canvasWidth = 600;
 let canvasHeight = 400;
 let frog;
 let car1;
+let car1;
+let car1;
+let car1;
+let car1;
+let car1;
+let car1;
+
 let goal;
 let sound_hit;
 
@@ -29,7 +36,7 @@ function draw() {
     car1.setVelocity(5, 0);
   }
   if (frog.position.x >= width) {
-    frog.position.x = car1.position()
+    frog.position.x = 15;
   }
 
 
