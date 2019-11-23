@@ -37,35 +37,35 @@ function draw() {
     bad.setVelocity(5, 0);
   }
   if (bad1.position.x >= width) {
-    bad.position.x = 30;
+    bad.position.x = 0;
     bad.setVelocity(5, 0);
   }
   if (bad2.position.x >= width) {
-    bad.position.x =60;
+    bad.position.x = 0;
     bad.setVelocity(5, 0);
   }
   if (bad3.position.x >= width) {
-    bad.position.x = 90;
+    bad.position.x = 0;
     bad.setVelocity(5, 0);
   }
   if (bad4.position.x >= width) {
-    bad.position.x = 120;
+    bad.position.x = 0;
     bad.setVelocity(5, 0);
   }
   if (bad5.position.x >= width) {
-    bad.position.x = 150;
+    bad.position.x = 0;
     bad.setVelocity(5, 0);
   }
   if (bad6.position.x >= width) {
-    bad.position.x = 180;
+    bad.position.x = 0;
     bad.setVelocity(5, 0);
   }
   if (bad7.position.x >= width) {
-    bad.position.x = 210;
+    bad.position.x = 0;
     bad.setVelocity(5, 0);
   }
   if (bad8.position.x >= width) {
-    bad.position.x = 240;
+    bad.position.x = 0;
     bad.setVelocity(5, 0);
   }
 
@@ -76,6 +76,15 @@ function draw() {
 
 
   bad.displace(frog);
+  bad1.displace(frog);
+  bad2.displace(frog);
+  bad3.displace(frog);
+  bad4.displace(frog);
+  bad5.displace(frog);
+  bad6.displace(frog);
+  bad7.displace(frog);
+  bad8.displace(frog);
+
 
   // 충돌 시 사운드 효과에 대한 또 다른 방법
   // frog.collide(car1, playHitSound);
@@ -95,7 +104,7 @@ function draw() {
 function resetGame() {
   frog = createSprite(width/2, height-30, 20, 40);
   goal = createSprite(width/2, 0, width, 4);
-  bad = createSprite(0, 40, 60, 30);
+  bad = createSprite(0, 30, 60, 30);
   bad1 = createSprite(0, 60, 60, 30);
   bad2 = createSprite(0, 80, 60, 30);
   bad3 = createSprite(0, 100, 60, 30);
@@ -104,9 +113,16 @@ function resetGame() {
   bad6 = createSprite(0, 160, 60, 30);
   bad7 = createSprite(0, 180, 60, 30);
   bad8 = createSprite(0, 200, 60, 30);
-
-
   bad.setVelocity(5, 0);
+  bad1.setVelocity(5, 0);
+  bad2.setVelocity(5, 0);
+  bad3.setVelocity(5, 0);
+  bad4.setVelocity(5, 0);
+  bad5.setVelocity(5, 0);
+  bad6.setVelocity(5, 0);
+  bad7.setVelocity(5, 0);
+  bad8.setVelocity(5, 0);
+
 }
 
 
