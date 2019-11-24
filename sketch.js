@@ -77,7 +77,7 @@ function draw() {
   }
 
   if (bads.position.x <= width) {
-    bads.position.x = width;
+    bads.position.x = 600;
     bads.setVelocity(-5, 0);
   }
 
@@ -132,7 +132,7 @@ function resetGame() {
   bad6.setVelocity(5, 0);
   bad7.setVelocity(5, 0);
 
-  bads = createSprite(0, 10, 60, 30);
+  bads = createSprite(0, 20, 60, 30);
   bads.setVelocity(-5, 0);
 
 }
