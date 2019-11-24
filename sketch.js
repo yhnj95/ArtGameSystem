@@ -76,9 +76,33 @@ function draw() {
     frog.position.x = 25;
   }
 
+  if (frog.position.x <= 0) {
+    frog.position.x = 575;
+  }
+
   if (bads.position.x <= 0) {
     bads.position.x = 600;
     bads.setVelocity(-5, 0);
+  }
+  if (bads1.position.x <= 0) {
+    bads1.position.x = 600;
+    bads1.setVelocity(-5, 0);
+  }
+  if (bads2.position.x <= 0) {
+    bads2.position.x = 600;
+    bads2.setVelocity(-5, 0);
+  }
+  if (bads3.position.x <= 0) {
+    bads3.position.x = 600;
+    bads3.setVelocity(-5, 0);
+  }
+  if (bads4.position.x <= 0) {
+    bads4.position.x = 600;
+    bads4.setVelocity(-5, 0);
+  }
+  if (bads5.position.x <= 0) {
+    bads5.position.x = 600;
+    bads5.setVelocity(-5, 0);
   }
 
 
@@ -95,6 +119,12 @@ function draw() {
   bad7.displace(frog);
 
   bads.displace(frog);
+  bads1.displace(frog);
+  bads2.displace(frog);
+  bads3.displace(frog);
+  bads4.displace(frog);
+  bads5.displace(frog);
+
 
 
   // 충돌 시 사운드 효과에 대한 또 다른 방법
@@ -124,6 +154,11 @@ function resetGame() {
   bad6 = createSprite(0, 390, 60, 30);
   bad7 = createSprite(0, 450, 60, 30);
   bads = createSprite(0, 60, 60, 30);
+  bads1 = createSprite(0, 120, 60, 30);
+  bads2 = createSprite(0, 180, 60, 30);
+  bads3 = createSprite(0, 240, 60, 30);
+  bads4 = createSprite(0, 300, 60, 30);
+  bads5 = createSprite(0, 360, 60, 30);
   bad.setVelocity(5, 0);
   bad1.setVelocity(5, 0);
   bad2.setVelocity(5, 0);
@@ -133,6 +168,12 @@ function resetGame() {
   bad6.setVelocity(5, 0);
   bad7.setVelocity(5, 0);
   bads.setVelocity(-5, 0);
+  bads1.setVelocity(-5, 0);
+  bads2.setVelocity(-5, 0);
+  bads3.setVelocity(-5, 0);
+  bads4.setVelocity(-5, 0);
+  bads5.setVelocity(-5, 0);
+
 
 }
 
