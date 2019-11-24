@@ -113,7 +113,7 @@ function draw() {
 
 
 function resetGame() {
-  frog = createSprite(width/2, height-30, 20, 40);
+  frog = createSprite(width/2, height-30, 20, 20);
   goal = createSprite(width/2, 0, width, 4);
   bad = createSprite(0, 30, 60, 30);
   bad1 = createSprite(0, 90, 60, 30);
@@ -123,7 +123,7 @@ function resetGame() {
   bad5 = createSprite(0, 330, 60, 30);
   bad6 = createSprite(0, 390, 60, 30);
   bad7 = createSprite(0, 450, 60, 30);
-  bads = createSprite(0, 20, 60, 30);
+  bads = createSprite(0, 60, 60, 30);
   bad.setVelocity(5, 0);
   bad1.setVelocity(5, 0);
   bad2.setVelocity(5, 0);
