@@ -76,7 +76,7 @@ function draw() {
     frog.position.x = 25;
   }
 
-  if (bads.position.x <= width) {
+  if (bads.position.x <= 0) {
     bads.position.x = 600;
     bads.setVelocity(-5, 0);
   }
@@ -123,6 +123,7 @@ function resetGame() {
   bad5 = createSprite(0, 330, 60, 30);
   bad6 = createSprite(0, 390, 60, 30);
   bad7 = createSprite(0, 450, 60, 30);
+  bads = createSprite(0, 20, 60, 30);
   bad.setVelocity(5, 0);
   bad1.setVelocity(5, 0);
   bad2.setVelocity(5, 0);
@@ -131,8 +132,6 @@ function resetGame() {
   bad5.setVelocity(5, 0);
   bad6.setVelocity(5, 0);
   bad7.setVelocity(5, 0);
-
-  bads = createSprite(0, 20, 60, 30);
   bads.setVelocity(-5, 0);
 
 }
