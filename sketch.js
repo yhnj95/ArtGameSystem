@@ -11,5 +11,7 @@ function setup() {
 function draw() {
   background(255);
   fill(0);
-  
+  line(canvasWidth/2,1, canvasHeight/2,1);
+  strokeWeight(4);
+
 }
