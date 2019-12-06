@@ -14,7 +14,7 @@ function draw() {
   rect(0, 0, 300, 400);
   heart = ellipse(350, 200, 45, 45);
 
- if(heart != null){
+ heart.onMousePressed = function() {
    heart.position.x = mouseX;
    heart.position.y = mouseY;
  }
