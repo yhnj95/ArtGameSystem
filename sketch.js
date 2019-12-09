@@ -13,8 +13,7 @@ let canvasHeight = 400;
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
-  fill(255,255,255);
-  ellipse(random(20,250),random(20,350),random(10,45),random(10,45));
+
   bx = 400;
   by = 300;
   rectMode(RADIUS);
@@ -25,7 +24,19 @@ function draw() {
   background(255);
   fill(0);
   rect(0, 0, 300, 400);
-
+  fill(255,255,255);
+  ellipse(50,80,30,30);
+  ellipse(50,160,25,25);
+  ellipse(50,240,10,10);
+  ellipse(50,320,10,10);
+  ellipse(150,80,10,10);
+  ellipse(150,160,25,25);
+  ellipse(150,240,47,47);
+  ellipse(150,320,35,35);
+  ellipse(250,80,30,30);
+  ellipse(250,160,17,17);
+  ellipse(250,240,12,12);
+  ellipse(250,320,48,48);
   if (
     mouseX > bx - boxSize &&
     mouseX < bx + boxSize &&
