@@ -13,6 +13,7 @@ let canvasHeight = 400;
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
+  fill(255,255,255);
   ellipse(random(20,250),random(20,350),random(10,45),random(10,45));
   bx = 400;
   by = 300;
@@ -24,7 +25,6 @@ function draw() {
   background(255);
   fill(0);
   rect(0, 0, 300, 400);
-  fill(255,255,255);
 
   if (
     mouseX > bx - boxSize &&
