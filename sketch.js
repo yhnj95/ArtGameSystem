@@ -57,7 +57,22 @@ function draw() {
     overBox = false;
   }
   ellipse(bx, by, boxSize);
-  ellipse(bx1, by1, boxSize);
+
+if (
+  mouseX > bx1 - boxSize &&
+  mouseX < bx1 + boxSize &&
+  mouseY > by1 - boxSize &&
+  mouseY < by1 + boxSize
+) {
+  overBox = true;
+  if (!locked) {
+    fill(255);
+  }
+} else {
+  fill(0);
+  overBox = false;
+}
+ellipse(bx1, by1, boxSize);
 
 }
 
@@ -70,12 +85,25 @@ function mousePressed() {
   }
   xOffset = mouseX - bx;
   yOffset = mouseY - by;
+
+  if (overBox) {
+    locked = true;
+    fill(255, 255, 255);
+  } else {
+    locked = false;
+  }
+  xOffset = mouseX - bx1;
+  yOffset = mouseY - by1;
 }
 
 function mouseDragged() {
   if (locked) {
     bx = mouseX - xOffset;
     by = mouseY - yOffset;
+  }
+  if (locked) {
+    bx1 = mouseX - xOffset;
+    by1 = mouseY - yOffset;
   }
 }
 
