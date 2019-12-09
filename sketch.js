@@ -32,7 +32,7 @@ function draw() {
   ) {
     overBox = true;
     if (!locked) {
-      fill(244, 122, 158);
+      fill(255);
     }
   } else {
     fill(0);
