@@ -25,7 +25,7 @@ function draw() {
   fill(0);
   rect(0, 0, 300, 400);
   fill(255,255,255);
-  ellipse(150,200,45,45);
+  ellipse(random(20,250),random(20,350),random(10,45),random(10,45));
   if (
     mouseX > bx - boxSize &&
     mouseX < bx + boxSize &&
