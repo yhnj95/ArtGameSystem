@@ -1,6 +1,8 @@
 
 let bx;
 let by;
+let bx1;
+let by1;
 let boxSize = 75;
 let overBox = false;
 let locked = false;
@@ -16,6 +18,8 @@ function setup() {
 
   bx = 400;
   by = 300;
+  bx1 = 350;
+  by1 = 80;
   rectMode(RADIUS);
   strokeWeight(0);
 }
@@ -37,6 +41,7 @@ function draw() {
   ellipse(250,160,17,17);
   ellipse(250,240,12,12);
   ellipse(250,320,48,48);
+
   if (
     mouseX > bx - boxSize &&
     mouseX < bx + boxSize &&
@@ -52,6 +57,8 @@ function draw() {
     overBox = false;
   }
   ellipse(bx, by, boxSize);
+  ellipse(bx1, by1, boxSize);
+
 }
 
 function mousePressed() {
