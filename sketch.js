@@ -65,10 +65,10 @@ if (
 ) {
   overBox = true;
   if (!locked) {
-    fill(255);
+    fill(255,123,0);
   }
 } else {
-  fill(0);
+  fill(255,123,0);
   overBox = false;
 }
 ellipse(bx1, by1, boxSize);
