@@ -3,16 +3,11 @@ let bx;
 let by;
 let bx1;
 let by1;
-let bx2;
-let by2;
-let bx3;
-let by3;
 let boxSize = 60;
 let overBox = false;
 let locked = false;
 let xOffset = 0.0;
 let yOffset = 0.0;
-
 let canvas;
 let canvasWidth = 600;
 let canvasHeight = 400;
@@ -23,8 +18,7 @@ function setup() {
 
   bx1 = 450;
   by1 = 200;
-  bx3 = 150;
-  by3 = 200;
+
 
   rectMode(RADIUS);
   strokeWeight(0);
@@ -71,22 +65,6 @@ function draw() {
     overBox = false;
   }
   ellipse(bx1, by1, boxSize);
-
-if (
-  mouseX > bx2 - boxSize &&
-  mouseX < bx2 + boxSize &&
-  mouseY > by2 - boxSize &&
-  mouseY < by2 + boxSize
-) {
-  overBox = true;
-  if (!locked) {
-    fill(255,123,0);
-  }
-} else {
-  fill(255,123,0);
-  overBox = false;
-}
-ellipse(bx2, by2, boxSize);
 }
 
 function mousePressed() {
@@ -96,29 +74,8 @@ function mousePressed() {
   } else {
     locked = false;
   }
-  xOffset = mouseX - bx;
-  yOffset = mouseY - by;
-
-  if (overBox) {
-    locked = true;
-    fill(255, 255, 255);
-  } else {
-    locked = false;
-  }
-  xOffset = mouseX - bx;
-  yOffset = mouseY - by;
-}
-
-function mousePressed() {
-  if (overBox) {
-    locked = true;
-    fill(255, 255, 255);
-  } else {
-    locked = false;
-  }
-  xOffset = mouseX - bx2;
-  yOffset = mouseY - by2;
-
+  xOffset = mouseX - bx1;
+  yOffset = mouseY - by1;
 }
 
 function mouseDragged() {
