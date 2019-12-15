@@ -1,207 +1,123 @@
+
+let bx;
+let by;
+let bx1;
+let by1;
+let boxSize = 60;
+let overBox = false;
+let locked = false;
+let xOffset = 0.0;
+let yOffset = 0.0;
+let xOffset2 = 0.0;
+let yOffset2 = 0.0;
 let canvas;
 let canvasWidth = 600;
 let canvasHeight = 400;
-let frog;
-let bad;
-let bad1;
-let bad2;
-let bad3;
-let bad4;
-let bad5;
-let bad6;
-let bad7;
-
-
-let bads;
-let bads1;
-let bads2;
-let bads3;
-let bads4;
-let bads5;
-let goal;
-let sound_hit;
-
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
-  resetGame();
-  noCursor();
+
+  bx1 = 450;
+  by1 = 200;
+  bx2 = 150;
+  by2 = 200;
+
+  rectMode(RADIUS);
+  strokeWeight(0);
 }
 
 function draw() {
   background(255);
   fill(0);
-  rect(mouseX, mouseY, 150, 150);
+  rect(0, 0, 300, 400);
+  fill(200);
+  ellipse(100,120,80,80);
+  ellipse(190,120,80,80);
+  ellipse(60,200,80,80);
+  ellipse(230,200,80,80);
+  ellipse(100,280,80,80);
+  ellipse(190,280,80,80);
+  ///////////////////////////
+  ellipse(450,155,20,20);
+  ellipse(417.75,167.75,20,20);
+  ellipse(482.25,167.75,20,20);
+  ellipse(405,200,20,20);
+  ellipse(495,200,20,20);
+  ellipse(417.75,232.25,20,20);
+  ellipse(482.25,232.25,20,20);
+  ellipse(450,245,20,20);
+
+
+
+
+
+
+  if (
+    mouseX > bx - boxSize &&
+    mouseX < bx + boxSize &&
+    mouseY > by - boxSize &&
+    mouseY < by + boxSize
+  ) {
+    overBox = true;
+    if (!locked) {
+      fill(255,123,0);
+    }
+  } else {
+    fill(255,123,0);
+    overBox = false;
+  }
+  ellipse(bx, by, boxSize);
+
+if (
+  mouseX > bx1 - boxSize &&
+  mouseX < bx1 + boxSize &&
+  mouseY > by1 - boxSize &&
+  mouseY < by1 + boxSize
+) {
+  overBox = true;
+  if (!locked) {
+    fill(255,123,0);
+  }
+} else {
+  fill(255,123,0);
+  overBox = false;
 }
-
-function draw() {
-  background(220);
-
-
-  if (bad.position.x >= width) {
-    bad.position.x = 0;
-    bad.setVelocity(5, 0);
-  }
-  if (bad1.position.x >= width) {
-    bad1.position.x = 0;
-    bad1.setVelocity(5, 0);
-  }
-  if (bad2.position.x >= width) {
-    bad2.position.x = 0;
-    bad2.setVelocity(5, 0);
-  }
-  if (bad3.position.x >= width) {
-    bad3.position.x = 0;
-    bad3.setVelocity(5, 0);
-  }
-  if (bad4.position.x >= width) {
-    bad4.position.x = 0;
-    bad4.setVelocity(5, 0);
-  }
-  if (bad5.position.x >= width) {
-    bad5.position.x = 0;
-    bad5.setVelocity(5, 0);
-  }
-  if (bad6.position.x >= width) {
-    bad6.position.x = 0;
-    bad6.setVelocity(5, 0);
-  }
-  if (bad7.position.x >= width) {
-    bad7.position.x = 0;
-    bad7.setVelocity(5, 0);
-  }
-
-  if (frog.position.x >= width) {
-    frog.position.x = 25;
-  }
-
-  if (frog.position.x <= 0) {
-    frog.position.x = 575;
-  }
-
-  if (bads.position.x <= 0) {
-    bads.position.x = 600;
-    bads.setVelocity(-5, 0);
-  }
-  if (bads1.position.x <= 0) {
-    bads1.position.x = 600;
-    bads1.setVelocity(-5, 0);
-  }
-  if (bads2.position.x <= 0) {
-    bads2.position.x = 600;
-    bads2.setVelocity(-5, 0);
-  }
-  if (bads3.position.x <= 0) {
-    bads3.position.x = 600;
-    bads3.setVelocity(-5, 0);
-  }
-  if (bads4.position.x <= 0) {
-    bads4.position.x = 600;
-    bads4.setVelocity(-5, 0);
-  }
-  if (bads5.position.x <= 0) {
-    bads5.position.x = 600;
-    bads5.setVelocity(-5, 0);
-  }
-
-
-
-
-
-  bad.displace(frog);
-  bad1.displace(frog);
-  bad2.displace(frog);
-  bad3.displace(frog);
-  bad4.displace(frog);
-  bad5.displace(frog);
-  bad6.displace(frog);
-  bad7.displace(frog);
-
-  bads.displace(frog);
-  bads1.displace(frog);
-  bads2.displace(frog);
-  bads3.displace(frog);
-  bads4.displace(frog);
-  bads5.displace(frog);
-
-
-
-  // 충돌 시 사운드 효과에 대한 또 다른 방법
-  // frog.collide(car1, playHitSound);
-  // frog.bounce(car1);
-
-
-  if (frog.overlap(goal)) {
-    nextLevel();
-  }
-
-  drawSprites();
-//  checkGameOver();
+ellipse(bx1, by1, boxSize);
 
 }
 
+function mousePressed() {
+  if (overBox) {
+    locked = true;
+    fill(255, 255, 255);
+  } else {
+    locked = false;
+  }
+  xOffset = mouseX - bx;
+  yOffset = mouseY - by;
 
-function resetGame() {
-  frog = createSprite(width/2, height-30, 20, 20);
-  goal = createSprite(width/2, 0, width, 4);
-  bad = createSprite(0, 30, 60, 30);
-  bad1 = createSprite(0, 90, 60, 30);
-  bad2 = createSprite(0, 150, 60, 30);
-  bad3 = createSprite(0, 210, 60, 30);
-  bad4 = createSprite(0, 270, 60, 30);
-  bad5 = createSprite(0, 330, 60, 30);
-  bad6 = createSprite(0, 390, 60, 30);
-  bad7 = createSprite(0, 450, 60, 30);
-  bads = createSprite(0, 60, 60, 30);
-  bads1 = createSprite(0, 120, 60, 30);
-  bads2 = createSprite(0, 180, 60, 30);
-  bads3 = createSprite(0, 240, 60, 30);
-  bads4 = createSprite(0, 300, 60, 30);
-  bads5 = createSprite(0, 360, 60, 30);
-  bad.setVelocity(5, 0);
-  bad1.setVelocity(5, 0);
-  bad2.setVelocity(5, 0);
-  bad3.setVelocity(5, 0);
-  bad4.setVelocity(5, 0);
-  bad5.setVelocity(5, 0);
-  bad6.setVelocity(5, 0);
-  bad7.setVelocity(5, 0);
-  bads.setVelocity(-5, 0);
-  bads1.setVelocity(-5, 0);
-  bads2.setVelocity(-5, 0);
-  bads3.setVelocity(-5, 0);
-  bads4.setVelocity(-5, 0);
-  bads5.setVelocity(-5, 0);
-
-
+  if (overBox) {
+    locked = true;
+    fill(255, 255, 255);
+  } else {
+    locked = false;
+  }
+  xOffset = mouseX - bx1;
+  yOffset = mouseY - by1;
 }
 
-
-function keyPressed() {
-  if (keyCode == UP_ARROW) {
-    frog.position.y -= 10;
+function mouseDragged() {
+  if (locked) {
+    bx = mouseX - xOffset;
+    by = mouseY - yOffset;
+  }
+  if (locked) {
+    bx1 = mouseX - xOffset;
+    by1 = mouseY - yOffset;
   }
 }
 
-
-//function checkGameOver() {
-//  if (frog.position.x <= 0 || width <= frog.position.x) {
-//    fill(255, 0, 0);
-//    textSize(60);
-//    textAlign(CENTER);
-//    text("GAME OVER", width/2, height/2);
-//
-//  }
-//}
-
-
-function nextLevel() {
-  frog.position.x = width/2;
-  frog.position.y = height-30;
-}
-
-
-function playHitSound() {
-  sound_hit.play();
+function mouseReleased() {
+  locked = false;
 }
