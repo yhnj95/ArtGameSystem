@@ -74,10 +74,10 @@ function draw() {
   ellipse(bx1, by1, boxSize);
 
 if (
-  mouseX > bx1 - boxSize &&
-  mouseX < bx1 + boxSize &&
-  mouseY > by1 - boxSize &&
-  mouseY < by1 + boxSize
+  mouseX > bx2 - boxSize &&
+  mouseX < bx2 + boxSize &&
+  mouseY > by2 - boxSize &&
+  mouseY < by2 + boxSize
 ) {
   overBox = true;
   if (!locked) {
@@ -144,8 +144,8 @@ function mouseDragged() {
 
 function mouseDragged() {
   if (locked) {
-    bx2 = mouseX - xOffset;
-    by2 = mouseY - yOffset;
+    bx3 = mouseX - xOffset;
+    by3 = mouseY - yOffset;
   }
   if (locked) {
     bx3 = mouseX - xOffset;
