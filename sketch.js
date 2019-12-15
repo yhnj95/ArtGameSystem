@@ -8,7 +8,6 @@ let overBox = false;
 let locked = false;
 let xOffset = 0.0;
 let yOffset = 0.0;
-
 let canvas;
 let canvasWidth = 600;
 let canvasHeight = 400;
