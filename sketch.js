@@ -24,8 +24,8 @@ function setup() {
 
   bx1 = 450;
   by1 = 200;
-  bx2 = 150;
-  by2 = 200;
+  bx3 = 150;
+  by3 = 200;
 
   rectMode(RADIUS);
   strokeWeight(0);
@@ -87,7 +87,7 @@ if (
   fill(255,123,0);
   overBox = false;
 }
-ellipse(bx2, by2, boxSize);
+ellipse(bx3, by3, boxSize);
 
 }
 
