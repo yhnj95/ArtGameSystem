@@ -8,6 +8,7 @@ let overBox = false;
 let locked = false;
 let xOffset = 0.0;
 let yOffset = 0.0;
+
 let canvas;
 let canvasWidth = 600;
 let canvasHeight = 400;
@@ -18,6 +19,7 @@ function setup() {
 
   bx1 = 450;
   by1 = 200;
+
   rectMode(RADIUS);
   strokeWeight(0);
 }
@@ -34,14 +36,14 @@ function draw() {
   ellipse(100,280,80,80);
   ellipse(190,280,80,80);
   ///////////////////////////
-  ellipse(450,155,20,20);
-  ellipse(417.75,167.75,20,20);
-  ellipse(482.25,167.75,20,20);
-  ellipse(405,200,20,20);
-  ellipse(495,200,20,20);
-  ellipse(417.75,232.25,20,20);
-  ellipse(482.25,232.25,20,20);
-  ellipse(450,245,20,20);
+  ellipse(450,155,18);
+  ellipse(417.75,167.75,18);
+  ellipse(482.25,167.75,18);
+  ellipse(405,200,18);
+  ellipse(495,200,18);
+  ellipse(417.75,232.25,18);
+  ellipse(482.25,232.25,18);
+  ellipse(450,245,18);
 
 
 
@@ -56,31 +58,14 @@ function draw() {
   ) {
     overBox = true;
     if (!locked) {
-      fill(255);
+      fill(255,123,0);
     }
   } else {
-    fill(0);
+    fill(255,123,0);
     overBox = false;
   }
-  ellipse(bx, by, boxSize);
+  ellipse(bx1, by1, boxSize);
 
-if (
-  mouseX > bx1 - boxSize &&
-  mouseX < bx1 + boxSize &&
-  mouseY > by1 - boxSize &&
-  mouseY < by1 + boxSize
-) {
-  overBox = true;
-  if (!locked) {
-    fill(255,123,0);
-  }
-} else {
-  fill(255,123,0);
-  overBox = false;
-}
-ellipse(bx1, by1, boxSize);
-
-}
 
 function mousePressed() {
   if (overBox) {
@@ -92,26 +77,28 @@ function mousePressed() {
   xOffset = mouseX - bx;
   yOffset = mouseY - by;
 
+function mousePressed() {
   if (overBox) {
     locked = true;
     fill(255, 255, 255);
   } else {
     locked = false;
   }
-  xOffset = mouseX - bx1;
-  yOffset = mouseY - by1;
-}
+  xOffset = mouseX - bx2;
+  yOffset = mouseY - by2;
+
 
 function mouseDragged() {
-  if (locked) {
-    bx = mouseX - xOffset;
-    by = mouseY - yOffset;
-  }
   if (locked) {
     bx1 = mouseX - xOffset;
     by1 = mouseY - yOffset;
   }
+  if (locked) {
+    bx2 = mouseX - xOffset;
+    by2 = mouseY - yOffset;
+  }
 }
+
 
 function mouseReleased() {
   locked = false;
