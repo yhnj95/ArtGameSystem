@@ -127,8 +127,8 @@ function mouseDragged() {
     by1 = mouseY - yOffset;
   }
   if (locked) {
-    bx2 = mouseX - xOffset;
-    by2 = mouseY - yOffset;
+    bx1 = mouseX - xOffset;
+    by1 = mouseY - yOffset;
   }
 }
 
