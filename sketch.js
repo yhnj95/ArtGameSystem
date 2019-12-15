@@ -64,6 +64,7 @@ function draw() {
   }
   ellipse(bx, by, boxSize);
 }
+
 if (
   mouseX > bx1 - boxSize &&
   mouseX < bx1 + boxSize &&
