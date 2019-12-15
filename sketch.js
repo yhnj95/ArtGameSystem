@@ -29,12 +29,12 @@ function draw() {
   fill(0);
   rect(0, 0, 300, 400);
   fill(200);
-  ellipse(100,80,80,80);
-  ellipse(200,80,80,80);
-  ellipse(10,200,80,80);
-  ellipse(290,200,80,80);
-  ellipse(100,263,80,80);
-  ellipse(200,263,80,80);
+  ellipse(100,90,80,80);
+  ellipse(200,90,80,80);
+  ellipse(60,200,80,80);
+  ellipse(240,200,80,80);
+  ellipse(100,300,80,80);
+  ellipse(200,300,80,80);
 
 
 
