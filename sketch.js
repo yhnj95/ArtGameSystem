@@ -19,6 +19,8 @@ function setup() {
 
   bx = 450;
   by = 200;
+  bx1 = 150;
+  by1 = 200;
 
 
   rectMode(RADIUS);
@@ -62,6 +64,22 @@ function draw() {
   }
   ellipse(bx, by, boxSize);
 }
+if (
+  mouseX > bx1 - boxSize &&
+  mouseX < bx1 + boxSize &&
+  mouseY > by1 - boxSize &&
+  mouseY < by1 + boxSize
+) {
+  overBox = true;
+  if (!locked) {
+    fill(255,123,0);
+  }
+} else {
+  fill(255,123,0);
+  overBox = false;
+}
+ellipse(bx1, by1, boxSize);
+
 
 function mousePressed() {
   if (overBox) {
@@ -73,11 +91,27 @@ function mousePressed() {
   xOffset = mouseX - bx;
   yOffset = mouseY - by;
 }
+function mousePressed() {
+  if (overBox) {
+    locked = true;
+    fill(255, 255, 255);
+  } else {
+    locked = false;
+  }
+  xOffset = mouseX - bx1;
+  yOffset = mouseY - by1;
+}
 
 function mouseDragged() {
   if (locked) {
     bx = mouseX - xOffset;
     by = mouseY - yOffset;
+  }
+}
+function mouseDragged() {
+  if (locked) {
+    bx1 = mouseX - xOffset;
+    by1 = mouseY - yOffset;
   }
 }
 
