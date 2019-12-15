@@ -142,6 +142,17 @@ function mouseDragged() {
   }
 }
 
+function mouseDragged() {
+  if (locked) {
+    bx2 = mouseX - xOffset;
+    by2 = mouseY - yOffset;
+  }
+  if (locked) {
+    bx3 = mouseX - xOffset;
+    by3 = mouseY - yOffset;
+  }
+}
+
 function mouseReleased() {
   locked = false;
 }
