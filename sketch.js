@@ -3,7 +3,7 @@ let bx;
 let by;
 let bx1;
 let by1;
-let boxSize = 75;
+let boxSize = 60;
 let overBox = false;
 let locked = false;
 let xOffset = 0.0;
@@ -29,12 +29,12 @@ function draw() {
   fill(0);
   rect(0, 0, 300, 400);
   fill(200);
-  ellipse(100,90,80,80);
-  ellipse(200,90,80,80);
+  ellipse(100,120,80,80);
+  ellipse(190,120,80,80);
   ellipse(60,200,80,80);
-  ellipse(240,200,80,80);
-  ellipse(100,300,80,80);
-  ellipse(200,300,80,80);
+  ellipse(230,200,80,80);
+  ellipse(100,280,80,80);
+  ellipse(190,280,80,80);
 
 
 
