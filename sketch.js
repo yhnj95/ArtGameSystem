@@ -16,10 +16,8 @@ function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
 
-  bx = 400;
-  by = 300;
-  bx1 = 350;
-  by1 = 80;
+  bx1 = 450;
+  by1 = 200;
   rectMode(RADIUS);
   strokeWeight(0);
 }
@@ -35,6 +33,17 @@ function draw() {
   ellipse(230,200,80,80);
   ellipse(100,280,80,80);
   ellipse(190,280,80,80);
+  ///////////////////////////
+  ellipse(450,170,20);
+  ellipse(435,185,20);
+  ellipse(495,185,20);
+  ellipse(420,200,20);
+  ellipse(480,200,20);
+  ellipse(435,215,20);
+  ellipse(495,215,20);
+  ellipse(450,230,20);
+
+
 
 
 
