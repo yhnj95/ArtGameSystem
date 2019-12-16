@@ -11,6 +11,8 @@ let locked = false;
 let locked2 = false;
 let xOffset = 0.0;
 let yOffset = 0.0;
+let xOffset2 = 0.0;
+let yOffset2 = 0.0;
 let canvas;
 let canvasWidth = 600;
 let canvasHeight = 400;
@@ -100,8 +102,8 @@ function mousePressed2() {
   } else {
     locked2 = false;
   }
-  xOffset = mouseX - bx1;
-  yOffset = mouseY - by1;
+  xOffset2 = mouseX - bx1;
+  yOffset2 = mouseY - by1;
 }
 
 function mouseDragged() {
@@ -112,8 +114,8 @@ function mouseDragged() {
 }
 function mouseDragged2() {
   if (locked2) {
-    bx1 = mouseX - xOffset;
-    by1 = mouseY - yOffset;
+    bx1 = mouseX - xOffset2;
+    by1 = mouseY - yOffset2;
   }
 }
 
