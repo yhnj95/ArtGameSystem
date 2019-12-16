@@ -66,7 +66,7 @@ function draw() {
     fill(255,123,0);
     overBox = false;
   }
-  ellipse(bx, by, boxSize);
+  ellipse(bx, by, boxSize,boxSize);
 
 if (
   mouseX > bx1 - boxSize2 &&
@@ -76,13 +76,13 @@ if (
 ) {
   overBox2 = true;
   if (!locked2) {
-    fill(255,123,0);
+  fill(255,123,0);
   }
 } else {
   fill(255,123,0);
   overBox2 = false;
 }
-ellipse(bx1, by1, boxSize2);
+ellipse(bx1, by1, boxSize2,boxSize2);
 }
 
 function mousePressed() {
